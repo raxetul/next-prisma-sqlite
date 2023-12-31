@@ -1,13 +1,18 @@
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { lusitana } from '@/components/fonts';
+import Image from 'next/image';
 
 export default function AcmeLogo() {
   return (
     <div
-      className={`${lusitana.className} flex flex-row items-center leading-none text-white`}
+      className={`${lusitana.className} flex flex-row items-center leading-none `}
     >
-      <GlobeAltIcon className="h-12 w-12 rotate-[15deg]" />
-      <p className="text-[44px]">Acme</p>
+      <Image src="/android-chrome-192x192.png"
+      width={48}
+      height={48}
+      alt="Picture of the author">
+
+      </Image>
+      <p className="text-[44px]">App</p>
     </div>
   );
 }
