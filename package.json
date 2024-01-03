@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepareDb": "npx prisma db push",
+    "addAdminUser": "tsc src/lib/user.ts --outdir dist && node scripts/init-admin-user"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
@@ -40,6 +42,6 @@
     "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "0.5.10",
     "prisma": "^5.7.1"
-   
+
   }
 }
