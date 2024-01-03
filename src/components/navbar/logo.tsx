@@ -1,4 +1,4 @@
-import { lusitana } from '@/components/fonts';
+import { lusitana } from '@/styles/fonts';
 import Image from 'next/image';
 
 export default function AcmeLogo() {

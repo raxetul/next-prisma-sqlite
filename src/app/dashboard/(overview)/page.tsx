@@ -1,7 +1,7 @@
 
 import { Suspense } from "react";
 import { LatestInvoicesSkeleton, RevenueChartSkeleton, CardSkeleton } from "@/components/skeletons";
-import { lusitana } from '@/components/fonts';
+import { lusitana } from '@/styles/fonts';
 
 export default async function Page() {
 

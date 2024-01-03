@@ -1,27 +1,22 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import SideNav from "@/components/navbar/sidenav";
-
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import '@/styles/global.css';
+import { lusitana } from "@/styles/fonts";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'My Next App Template',
-  description: 'Next app template using sqlite',
-}
+  title: 'Template Dashboard Application',
+  // description: '',
+  // metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+};
+
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
-    <div className="w-full flex-none md:w-64">
-      <SideNav />
-    </div>
-    <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
-  </div>
-  )
+    <html lang="en">
+      <body className={`${lusitana.className} antialiased`}> {children} </body>
+    </html>
+  );
 }

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import NavLinks from '@/components/navbar/nav-links';
 import AcmeLogo from '@/components/navbar/logo';
 import { PowerIcon } from '@heroicons/react/24/outline';
-import { lusitana } from '@/components/fonts';
-// import auth from "@/auth";
+import { lusitana } from '@/styles/fonts';
+import {signOut} from "@/auth";
 
 export default function SideNav() {
   return (
@@ -22,9 +22,9 @@ export default function SideNav() {
         <form
           action={async () => {
             'use server';
-            // await auth.signOut();
+            await signOut();
           }}>
-          <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md  p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
+          <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md  p-3 text-sm font-medium hover:bg-sky-100 hover:text-orange-600 md:flex-none md:justify-start md:p-2 md:px-3">
             <PowerIcon className="w-6" />
             <div className="hidden md:block">Sign Out</div>
           </button>
