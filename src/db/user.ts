@@ -41,10 +41,7 @@ export async function createUser(user: User): Promise<User | null> {
   }
 }
 
-export async function addAdminUser(
-  prevState: string | undefined,
-  formData: FormData,
-) {
+export async function addAdminUser() {
   try {
     await createUser({
       id: '',
